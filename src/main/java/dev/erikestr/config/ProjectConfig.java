@@ -9,19 +9,25 @@ import dev.erikestr.beans.Vehicle;
 public class ProjectConfig {
 
     @Bean
-    public Vehicle vehicle() {
+    public Vehicle vehicle1() {
         var vehicle = new Vehicle();
-        vehicle.setName("default");
+        vehicle.setName("default-1");
         return vehicle;
     }
 
     @Bean
-    public String hello() {
-        return "Hello World";
+    public Vehicle vehicle2() {
+        var vehicle = new Vehicle();
+        vehicle.setName("default-2");
+        return vehicle;
     }
 
+
     @Bean
-    public Integer number() {
-        return 16;
+    public Vehicle vehicle3() {
+        var vehicle = new Vehicle();
+        vehicle.setName("default-3");
+        return vehicle;
     }
+
 }
