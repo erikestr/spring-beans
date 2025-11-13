@@ -8,14 +8,14 @@ import dev.erikestr.beans.Vehicle;
 @Configuration
 public class ProjectConfig {
 
-    @Bean
+    @Bean(name="default1")
     public Vehicle vehicle1() {
         var vehicle = new Vehicle();
         vehicle.setName("default-1");
         return vehicle;
     }
 
-    @Bean
+    @Bean(name="default2")
     public Vehicle vehicle2() {
         var vehicle = new Vehicle();
         vehicle.setName("default-2");
@@ -23,7 +23,7 @@ public class ProjectConfig {
     }
 
 
-    @Bean
+    @Bean(name="default3")
     public Vehicle vehicle3() {
         var vehicle = new Vehicle();
         vehicle.setName("default-3");
