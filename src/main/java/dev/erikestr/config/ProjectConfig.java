@@ -2,6 +2,7 @@ package dev.erikestr.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 import dev.erikestr.beans.Vehicle;
 
@@ -22,7 +23,7 @@ public class ProjectConfig {
         return vehicle;
     }
 
-
+    @Primary
     @Bean(name="default3")
     public Vehicle vehicle3() {
         var vehicle = new Vehicle();

@@ -8,7 +8,7 @@ import dev.erikestr.config.ProjectConfig;
 public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
-        Vehicle ctxVehicle = context.getBean("default2", Vehicle.class);
-        System.out.println("Vehicle from Spring Context: " + ctxVehicle.getName());
+        Vehicle ctxVehicle = context.getBean(Vehicle.class);
+        System.out.println("Vehicle from Spring Context(Primary is default-3): " + ctxVehicle.getName());
     }
 }
