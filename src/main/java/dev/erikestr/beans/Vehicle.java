@@ -1,7 +1,9 @@
 package dev.erikestr.beans;
 
 import org.springframework.stereotype.Component;
+
 import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 
 @Component
 public class Vehicle {
@@ -23,5 +25,11 @@ public class Vehicle {
     public Vehicle defaultVehicle() {
         this.name = "default-4";
         return this;
+    }
+
+    @PreDestroy
+    public void destroy() {
+        this.name = null;
+        System.out.println("Vehicle bean is being destroyed.");
     }
 }

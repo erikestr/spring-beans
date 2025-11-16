@@ -12,5 +12,7 @@ public class Main {
         System.out.println("Vehicle from Spring Context using @PostConstruct: " + ctxVehicle.getName());
         ctxVehicle.defaultVehicle();
         System.out.println("Vehicle from Spring Context after defaultVehicle() call: " + ctxVehicle.getName());
+
+        context.close();
     }
 }
