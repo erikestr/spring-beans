@@ -9,6 +9,8 @@ public class Main {
     public static void main(String[] args) {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
         Vehicle ctxVehicle = context.getBean(Vehicle.class);
-        System.out.println("Vehicle from Spring Context(Primary is default-3): " + ctxVehicle.getName());
+        System.out.println("Vehicle from Spring Context using @Component: " + ctxVehicle.getName());
+        ctxVehicle.defaultVehicle();
+        System.out.println("Vehicle from Spring Context after defaultVehicle() call: " + ctxVehicle.getName());
     }
 }
